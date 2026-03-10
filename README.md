@@ -12,9 +12,9 @@ ThreatLens is an automated SafeLine Web Application Firewall (WAF) analytics pip
 
 * Automated ingestion of WAF security records
 * Monthly log organization and storage
-* Structured multi‑tab classification of log types
+* Structured multi tab classification of log types
 * Automatic dashboard generation
-* Translation of non‑English log metadata
+* Translation of non English log metadata
 * Duplicate record prevention
 * Scheduled log collection using Apps Script triggers
 
@@ -63,7 +63,7 @@ ThreatLens pulls paginated data from SafeLine WAF API endpoints using scheduled 
 
 ### 2. Normalization Layer
 
-Numeric codes from the WAF are mapped into human‑readable values such as attack types, actions, protocols, and risk levels.
+Numeric codes from the WAF are mapped into human readable values such as attack types, actions, protocols, and risk levels.
 
 ### 3. Storage Layer
 
@@ -145,15 +145,18 @@ ThreatLens requires permissions for:
 ---
 ## Operational Flexibility
 
-ThreatLens is designed to support adjustable ingestion frequency. The trigger schedule can be throttled up or down depending on the volume of traffic and security events entering the SafeLine WAF environment. In lower-volume environments, longer intervals can reduce unnecessary execution overhead. In higher-volume environments, shorter intervals can improve reporting freshness and reduce the size of each processing cycle.
+ThreatLens is designed to support adjustable ingestion frequency. The trigger schedule can be throttled up or down depending on the volume of traffic and security events entering the SafeLine WAF environment. In lower volume environments, longer intervals can reduce unnecessary execution overhead. In higher volume environments, shorter intervals can improve reporting freshness and reduce the size of each processing cycle.
 
 A practical operating model is to tune 'TRIGGER_INTERVAL_MINUTES' based on observed log volume, API response size, Apps Script execution duration, and dashboard update latency. This makes the pipeline more adaptive, efficient, and resilient as data volumes change over time.
 
 
 ---
-##Pipeline Screenshots
+## Pipeline Screenshots
 
 Note: The following images are screenshots from a production client environment used to demonstrate the ThreatLens pipeline in action. Sensitive information such as hostnames, IP addresses, URLs, and application identifiers has been intentionally masked to protect client confidentiality.
-<img width="1914" height="928" alt="WAF11" src="https://github.com/user-attachments/assets/680a5b47-1f91-4579-89e5-bad480e44765" />
-<img width="1914" height="928" alt="WAF" src="https://github.com/user-attachments/assets/5e4534d4-2b74-415d-8c58-1632d5421c58" />
-<img width="1926" height="875" alt="WAF0" src="https://github.com/user-attachments/assets/2814baa4-f1ec-43f0-959a-7b82e2ce1b40" />
+
+<img width="1914" height="928" alt="WAF" src="https://github.com/user-attachments/assets/a1849f25-fd26-4d05-af96-884c26c0557d" />
+
+<img width="1914" height="928" alt="WAF11" src="https://github.com/user-attachments/assets/45c6ec66-e40c-4146-acc8-b41e6d0d72b0" />
+
+<img width="1926" height="875" alt="WAF0" src="https://github.com/user-attachments/assets/9e755faa-6a2f-484b-be0a-ebbd2b521b42" />
